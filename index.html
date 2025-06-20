@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <title>Birthday Wish Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World 🎉</h1>
-    <h2>Happy Birthday</h2>
+    <h1>🎉 Birthday Wish Generator 🎉</h1>
+
+    <form id="wish-form">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <select id="gender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option value="man">Man</option>
+        <option value="woman">Woman</option>
+        <option value="person">Person</option>
+      </select>
+      <button type="submit">Generate Wish</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
