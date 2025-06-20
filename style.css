@@ -1,17 +1,102 @@
+/* Base styles */
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: #fff0f6; /* soft pink background */
+  color: #4a3c55; /* muted plum text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #7e547e; /* deeper mauve */
   text-align: center;
-  padding: 30px;
+  letter-spacing: 1.2px;
 }
 
-form {
-  margin-bottom: 20px;
+/* Form container */
+form#wish-form {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(179, 139, 179, 0.25);
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-input,
-select,
+/* Inputs and select */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 12px 15px;
+  border: 2px solid #d8a9d8; /* soft lavender */
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #4a3c55;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #b763b7; /* deeper purple on focus */
+  box-shadow: 0 0 6px #b763b7aa;
+}
+
+/* Button */
 button {
-  margin: 5px;
-  padding: 10px;
-  font-size: 1em;
+  padding: 12px 20px;
+  background: #d987d9; /* pastel pink-purple */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #c56eccaa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: #b763b7; /* darker purple on hover */
+  box-shadow: 0 7px 15px #9e4ea9cc;
+}
+
+/* Output container */
+#output {
+  margin-top: 25px;
+  max-width: 350px;
+  background: #ffe6f0; /* very soft pink */
+  padding: 20px 18px;
+  border-radius: 15px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #5b3e60;
+  min-height: 70px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(181, 132, 165, 0.2);
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  form#wish-form,
+  #output {
+    max-width: 90vw;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
 }
