@@ -8,7 +8,7 @@ document
     const gender = document.getElementById("gender").value;
     const outputDiv = document.getElementById("output");
 
-    const prompt = `Write a warm and cheerful birthday message for a ${age}-year-old ${gender} named ${name}.`;
+    const prompt = `Write a short and heartfelt birthday message (1-2 sentences) for a ${age}-year-old ${gender} named ${name}.`;
 
     const apiKey = "3dea2t99ce0052e3130d4f28b3eb9cof";
     const url = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(
